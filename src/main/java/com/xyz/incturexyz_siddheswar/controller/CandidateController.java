@@ -5,7 +5,9 @@ import com.xyz.incturexyz_siddheswar.models.dto.candidatemodels.CandidateRequest
 import com.xyz.incturexyz_siddheswar.models.dto.interviewmodels.Interview;
 import com.xyz.incturexyz_siddheswar.services.CandidateService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -31,5 +33,12 @@ public class CandidateController {
                            @RequestBody Interview interview){
         return candidateService.applyJob(candidate,interview);
     }
+
+    @PostMapping("/uploadResume")
+    public String uploadResume(@RequestPart("resume") MultipartFile file){
+        return candidateService.uploadResume(file);
+    }
+
+
 
 }

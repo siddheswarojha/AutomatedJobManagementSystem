@@ -1,5 +1,6 @@
 package com.xyz.incturexyz_siddheswar.services;
 
+import com.xyz.incturexyz_siddheswar.helper.ResumeUploadHelper;
 import com.xyz.incturexyz_siddheswar.models.dto.candidatemodels.Candidate;
 import com.xyz.incturexyz_siddheswar.models.dto.candidatemodels.CandidateRequest;
 import com.xyz.incturexyz_siddheswar.models.dto.interviewmodels.Interview;
@@ -7,6 +8,7 @@ import com.xyz.incturexyz_siddheswar.repository.CandidateRepository;
 import com.xyz.incturexyz_siddheswar.repository.InterviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -49,5 +51,22 @@ public class CandidateServicesImplementation implements CandidateService {
         candidateRepository.save(newCandidate);
         return newCandidate;
 
+    }
+
+    @Override
+    public String uploadResume(MultipartFile file) {
+        if(file.isEmpty()){
+            return "empty file";
+        }else{
+            ResumeUploadHelper helper = new ResumeUploadHelper();
+           boolean b = helper.fileUpload(file);
+           if(b)
+           {
+               return "successfully uploaded";
+           }else{
+               return "failed";
+           }
+
+        }
     }
 }
