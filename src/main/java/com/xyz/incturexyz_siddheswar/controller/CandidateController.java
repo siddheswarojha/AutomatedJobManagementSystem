@@ -1,7 +1,8 @@
 package com.xyz.incturexyz_siddheswar.controller;
 
-import com.xyz.incturexyz_siddheswar.models.dto.Candidate;
-import com.xyz.incturexyz_siddheswar.models.dto.Interview;
+import com.xyz.incturexyz_siddheswar.models.dto.candidatemodels.Candidate;
+import com.xyz.incturexyz_siddheswar.models.dto.candidatemodels.CandidateRequest;
+import com.xyz.incturexyz_siddheswar.models.dto.interviewmodels.Interview;
 import com.xyz.incturexyz_siddheswar.services.CandidateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +22,8 @@ public class CandidateController {
     }
 
     @PostMapping("/candidate")
-    public Candidate addCandidate(@RequestBody Candidate candidate) {
-        return this.candidateService.addCandidate(candidate);
+    public Candidate addCandidate(@RequestBody CandidateRequest candidateRequest) {
+        return candidateService.addCandidate(candidateRequest);
     }
 
     @PostMapping("/applyJob")

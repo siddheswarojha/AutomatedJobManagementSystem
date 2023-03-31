@@ -1,7 +1,6 @@
 package com.xyz.incturexyz_siddheswar.repository;
 
-import com.xyz.incturexyz_siddheswar.models.dto.Candidate;
-import com.xyz.incturexyz_siddheswar.models.dto.Interview;
+import com.xyz.incturexyz_siddheswar.models.dto.candidatemodels.Candidate;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,9 +1,9 @@
 package com.xyz.incturexyz_siddheswar.services;
 
 
-import com.xyz.incturexyz_siddheswar.models.dto.Candidate;
-import com.xyz.incturexyz_siddheswar.models.dto.Interview;
-import org.springframework.stereotype.Service;
+import com.xyz.incturexyz_siddheswar.models.dto.candidatemodels.Candidate;
+import com.xyz.incturexyz_siddheswar.models.dto.candidatemodels.CandidateRequest;
+import com.xyz.incturexyz_siddheswar.models.dto.interviewmodels.Interview;
 
 import java.util.List;
 
@@ -13,5 +13,5 @@ public interface CandidateService {
 
      List<Candidate> getCandidates();
 
-    Candidate addCandidate(Candidate candidate);
+    Candidate addCandidate(CandidateRequest candidate);
 }

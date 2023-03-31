@@ -1,14 +1,12 @@
-package com.xyz.incturexyz_siddheswar.models.dto;
+package com.xyz.incturexyz_siddheswar.models.dto.candidatemodels;
 
+import com.xyz.incturexyz_siddheswar.models.dto.interviewmodels.Interview;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.jpa.domain.AbstractPersistable;
-import org.springframework.web.multipart.MultipartFile;
 
-import javax.mail.Multipart;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import java.util.List;
 
 @Entity

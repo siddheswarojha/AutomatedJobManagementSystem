@@ -1,7 +1,7 @@
-package com.xyz.incturexyz_siddheswar.models.dto;
+package com.xyz.incturexyz_siddheswar.models.dto.interviewmodels;
 
 
-import com.xyz.incturexyz_siddheswar.services.CandidateService;
+import com.xyz.incturexyz_siddheswar.models.dto.candidatemodels.Candidate;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.jpa.domain.AbstractPersistable;
