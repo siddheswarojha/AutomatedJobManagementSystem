@@ -9,4 +9,6 @@ public interface InterviewService {
     List<Interview> getAllInterview();
 
     Interview addInterview(InterviewAddRequest interview);
+
+    String displayResult(Long candidateId, Long interviewId);
 }

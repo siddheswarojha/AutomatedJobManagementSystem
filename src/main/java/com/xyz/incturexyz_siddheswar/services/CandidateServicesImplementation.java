@@ -48,6 +48,7 @@ public class CandidateServicesImplementation implements CandidateService {
         Candidate newCandidate = new Candidate();
         newCandidate.setCandidateName(candidate.getCandidateName());
         newCandidate.setCandidateEmail(candidate.getCandidateEmail());
+
         candidateRepository.save(newCandidate);
         return newCandidate;
 

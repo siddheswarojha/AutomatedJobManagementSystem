@@ -16,7 +16,6 @@ public class Candidate extends AbstractPersistable<Long> {
 
     private String candidateName;
     private String candidateEmail;
-    private String filePath;
 
     @ManyToMany
     List<Interview> interview;

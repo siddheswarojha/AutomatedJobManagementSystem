@@ -16,6 +16,7 @@ public class Interview extends AbstractPersistable<Long> {
     private String interviewName;
     private String interviewDetails;
     private String interviewDate;
+    private boolean interviewResult = false;
 
     @ManyToMany
     List<Candidate> candidate;

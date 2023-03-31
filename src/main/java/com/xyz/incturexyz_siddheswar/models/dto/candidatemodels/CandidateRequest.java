@@ -8,5 +8,5 @@ import lombok.Setter;
 public class CandidateRequest {
     private String candidateName;
     private String candidateEmail;
-    private String filePath;
+
 }
